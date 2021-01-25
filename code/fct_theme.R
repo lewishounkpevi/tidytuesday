@@ -1,0 +1,33 @@
+theme_lewis <- function (coulprinc =  "#022873", coulsec = "#A79674", 
+          base_size = 12, legend.direction = "horizontal", 
+          legend.position = "bottom") 
+{
+  theme_bw(base_family = "Arial", base_size = base_size) + 
+    theme(axis.ticks = element_blank(), 
+          axis.text = element_text(face = "bold", size = rel(0.5)),
+          axis.title.x = element_text(face = "bold",
+                                      size = rel(2/3), hjust = 0.5, vjust = 0.5,
+                                      colour = coulprinc,    
+                                      margin = margin(b = 0.5, t = 0.5, unit = "cm")), 
+          axis.title.y = element_text(face = "bold", 
+                                      size = rel(2/3), hjust = 0.5, vjust = 0.5,
+                                      colour = coulprinc, 
+                                      margin = margin(r = 0.5, unit = "cm")), 
+          title = element_text(face = "plain", hjust = 0.5), 
+          plot.title = element_text(size = base_size, face = "bold", 
+                                    colour = coulprinc, vjust = 1), 
+          plot.subtitle = element_text(size = rel(2/3), face = "bold", 
+                                       colour = coulsec, vjust = 1, hjust = 0.01,
+                                       margin = margin(b = 0.5, unit = "cm")), 
+          plot.caption = element_text(size = rel(0.5), face = "plain", 
+                                      colour = coulsec, vjust = 0.5, hjust = 0), 
+          legend.text = element_text(face = "bold", rel(3/5), colour = coulsec), 
+          legend.direction = legend.direction, 
+          legend.position = legend.position, 
+          legend.title = element_blank(), 
+          panel.grid.major = element_line(linetype = "solid", 
+                                          colour = "#E7E9EA", size = 0.5),
+          panel.border = element_rect(fill = NA, colour = "#E7E9EA"),
+          panel.grid.minor = element_blank(), 
+          panel.background = element_rect(fill = NA, colour = NA, size = 0.5))
+}
