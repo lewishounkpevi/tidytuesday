@@ -4,3 +4,6 @@
 .Ruserdata
 sauvegarde/*
 code/old/*
+rmd/rkenyacensus/images/*
+rmd/rkenyacensus/rsconnect/*
+rmd/rkenyacensus/kenyacensus.html

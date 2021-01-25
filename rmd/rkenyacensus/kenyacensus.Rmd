@@ -1,0 +1,89 @@
+---
+title: "Kenya Census"
+author: "LHO"
+date: "25/01/2021"
+output: 
+  html_document:
+    css: !expr here::here("rmd", "rmdcss.css")
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Year: 2021 Month: 01 Week: 04 \| Kenya Census
+
+The data this week comes from [`rKenyaCensus`](https://github.com/Shelmith-Kariuki/rKenyaCensus) courtesy of [Shelmith Kariuki](https://twitter.com/Shel_Kariuki). Shelmith wrote about these datasets on her [blog](https://shelkariuki.netlify.app/post/rkenyacensus/).
+
+[More information...](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-01-19)
+
+### My Submition
+
+#### Gender dataset
+
+##### County Gender Pyramid
+
+```{r gender, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("code", "rkenyacensus", "gender.R"))
+```
+
+![county gender pyramid](images/gender_pyramid-01.jpeg "county gender pyramid")
+
+##### Data table
+
+```{r gender-table, echo=FALSE, message=FALSE, warning=FALSE}
+library(htmltools)
+library(tidyverse)
+load(here::here("sauvegarde", "gender.RData"))
+gender %>% 
+  DT::datatable( width = "100%",
+                 extensions = 'Buttons',
+                 rownames = FALSE,
+                 options = list(
+                   pageLength = 10,
+                   lengthMenu = c(10, 20, 30, 40, 50, 100),
+                   scrollX = TRUE,
+                   dom = 'Blrtip',
+                   bSort = FALSE,
+                   buttons =  list(list(extend = 'excel', text = "Télécharger en Excel")),
+                   language = list(url =
+                                     '//cdn.datatables.net/plug-ins/1.10.11/i18n/French.json')
+                 ),
+                 filter = 'none',
+                 caption = tags$caption(
+                   style = "caption-side: bottom; text-align: left; margin: 8px 0;",
+                   HTML(
+                     paste(
+                       "Source : Kenya National Bureau of  Statistics (February 2020)",
+                       "TidyTuesday rKenyacensus (Gender data)",
+                       "by: Lewis Hounkpevi",
+                       sep = "<br/>"))))
+```
+
+#### Crops dataset
+
+##### PCA
+
+![individuals pca on crops data](images/graphesacp_indi.png "individuals pca plot")
+
+![variables pca on crops data](images/graphesvar.png "variables")
+
+##### KMEANS Clustering
+
+![Kmeans Silhouette](images/graphe_silhouette_km.png "Kmeans Silhouette")
+
+![Kmeans Clusters](images/graphe_cluster_km.png "Kmeans Clusters")
+
+##### Hclust Clustering
+
+![Hclust Silhouette](images/graphe_silhouette_cah6.png "Hclust Silhouette")
+
+![Hclust Clusters](images/graphe_cluster_cah6.png "Hclust Clusters")
+
+##### Models Comparaison (Hclust vs Kmeans)
+
+![Comparaison silhouette](images/silpatch.png "Comparaison silhouette")
+
+![Comparaison cluster](images/cluspatch.png "Comparaison cluster")
+
+### Others submitions

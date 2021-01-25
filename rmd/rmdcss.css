@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&family=Nunito:wght@300&display=swap');
+
+
+body {
+    color: #707982;
+    font-family: Nunito,sans-serif;
+    font-weight:300;
+    font-size: 1.3em;
+}
+h1, h2 { 
+		color:#440154FF;
+		font-family: Nunito, sans-serif;
+		font-weight:bold;
+		font-size: 3em;
+		margin-top: 10px;
+		margin-bottom: 25px;
+    
+}
+
+
+h3 { 
+		color:#35B779FF;
+		font-family: Nunito, sans-serif;
+        font-weight:bold;
+        font-size: 2em;
+        margin-top: 10px;
+		margin-bottom: 25px;
+    
+}
+
+
+h4 { 
+		color:#6DCD59FF;
+		font-family: Nunito, sans-serif;
+        font-weight:bold;
+        font-size: 2em;
+        margin-top: 10px;
+		margin-bottom: 25px;
+    
+}
+
+h5 { 
+		color:#B4DE2CFF;
+		font-family: Nunito, sans-serif;
+        font-weight:400;
+        font-size: 1em;
+        margin-top: 10px;
+		margin-bottom: 25px;
+    
+}
+
+h6 { 
+		color:#FDE725FF;
+		font-family: Nunito, sans-serif;
+        font-weight:400;
+        font-size: 0.5em;
+        margin-top: 10px;
+		margin-bottom: 25px;
+    
+}
+
+
+
+div.dataTables_scrollHeadInner {
+    color: #FFF;
+    background-color:#482878FF;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    color:#FDE725FF !important;
+    background-color: #FFF !important;
+    background:initial !important;
+    border-radius:0 !important;
+     border: 1px solid transparent!important;
+    
+}
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: 400;
+    
+}
+
+th {
+  text-align: center !important;
+}
+
+td + td {
+  text-align: right !important;
+}
+
+
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.disabled):hover {
+    color:#FFF !important;
+    background-color: #FDE725FF !important;
+    background:#FDE725FF #FDE725FF !important;
+    border: 1px solid #FDE725FF !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #FDE725FF !important;
+    border: 1px solid #FDE725FF !important;
+    background-color: #FFF !important;
+    background:initial !important;
+    border-radius:0px !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #FFF !important;
+    border: 1px solid #FDE725FF !important;
+    background-color: #FDE725FF !important;
+    background:#FDE725FF !important;
+}
+
+
+.btn-default{
+    background-color: #FFF !important;
+    background: #FFF !important;
+    color: #FDE725FF !important;
+    border: 1px solid #FDE725FF !important;
+    border-radius: 0px !important;
+    padding: 20px !important;
+    z-index:9;
+}
+
+.btn-default:hover {
+    background-color: #FDE725FF !important;
+    color: #FFF !important;
+    
+   
+}
+
+button.dt-button {
+    background-color: #FFF !important;
+    color: #FDE725FF !important;
+    border: 1px solid #FDE725FF !important;
+    border-radius: 0px !important;
+    padding: 10px 20px !important;
+    background: white !important;
+    letter-spacing: 0.2em;
+    font-size: 12px !important;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+button.dt-button:hover {
+    background-color: #FDE725FF !important;
+    color: #FFF !important;
+    border: 1px solid #FDE725FF;
+    border-radius: 0px;
+    padding: 10px 20px;
+    background: #FDE725FF !important;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+    margin: 10px 15px;
+}
+.dataTables_filter input{
+    margin:5px 0px 5px 0px;
+    padding:5px 5px;
+    border:1px solid #FDE725FF;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.col-sm-9 .box{
+    box-shadow:none;
+    margin:0px;
+    padding:0px;
+    border:none;
+}
+
+div.dt-button-collection{
+    width:350px;
+    
+}
+.dt-button.buttons-columnVisibility.active, .dt-button.buttons-columnVisibility.active:not(.disabled){
+    background-color: #FDE725FF !important;
+    background:#FDE725FF !important;
+    color:#FFF !important;
+    box-shadow:none !important;
+     
+}
+.dt-button.buttons-columnVisibility, .dt-button.buttons-columnVisibility:not(.disabled) {
+    background-color: #FFF !important;
+    background:#FFF !important;
+    color:#FDE725FF !important;
+    box-shadow:none !important;
+
+}
+.dt-button.buttons-columnVisibility:hover {
+     background-color: #FDE725FF !important;
+    background:#FDE725FF !important;
+    color:#FFF !important;
+    box-shadow:none !important;
+
+}
+.dt-button.buttons-columnVisibility.active:hover {
+    background-color: #FFF !important;
+    background:#FFF !important;
+    color:#FDE725FF !important;
+    box-shadow:none !important;
+}
