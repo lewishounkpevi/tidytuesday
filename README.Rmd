@@ -12,6 +12,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+This is my TidyTuesday submissions page
+
+    A weekly data project aimed at the R ecosystem. As this project was borne out of the `R4DS Online Learning Community` and the `R for Data Science` textbook, an emphasis was placed on understanding how to summarize and arrange data to make meaningful charts with `ggplot2`, `tidyr`, `dplyr`, and other tools in the `tidyverse` ecosystem. However, any code-based methodology is welcome - just please remember to share the code used to generate the results.
+
+[![tidytuesday](images/tt_logo.png "tidytuesday")](https://github.com/rfordatascience/tidytuesday)
+
 ## Year: 2021 Month: 01 Week: 05 \| Plastic Pollution
 
 The data this week comes from [Break Free from Plastic](https://www.breakfreefromplastic.org) courtesy of [Sarah Sauve](https://sarahasauve.wordpress.com).
@@ -76,8 +82,6 @@ gender %>%
                        "by: Lewis Hounkpevi",
                        sep = "<br/>"))))
 ```
-
-
 
 #### Crops dataset
 
