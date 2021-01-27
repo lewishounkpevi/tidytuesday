@@ -1,15 +1,32 @@
 ---
-title: "Kenya Census"
+title: "TidyTuesday"
 author: "LHO"
-date: "25/01/2021"
+date: "27/01/2021"
 output: 
   html_document:
     css: !expr here::here("rmd", "rmdcss.css")
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Year: 2021 Month: 01 Week: 05 \| Plastic Pollution
+
+The data this week comes from [Break Free from Plastic](https://www.breakfreefromplastic.org) courtesy of [Sarah Sauve](https://sarahasauve.wordpress.com).
+
+[More information...](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-01-26)
+
+### My Submission
+
+```{r plastic, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("code", "Y2021-M1-W5 Plastic Pollution", "plastic.R"))
+```
+
+![Starry Night](graphes/Y2021-M1-W5%20Plastic%20Pollution/plasticstarrynight.png "Starry Night")
+
+### Others submissions
 
 ## Year: 2021 Month: 01 Week: 04 \| Kenya Census
 
@@ -17,17 +34,17 @@ The data this week comes from [`rKenyaCensus`](https://github.com/Shelmith-Kariu
 
 [More information...](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-01-19)
 
-### My Submition
+### My Submission
 
 #### Gender dataset
 
 ##### County Gender Pyramid
 
 ```{r gender, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-source(here::here("code", "rkenyacensus", "gender.R"))
+source(here::here("code", "Y2021-M1-W4 rkenyacensus", "gender.R"))
 ```
 
-![county gender pyramid](images/gender_pyramid-01.jpeg "county gender pyramid")
+![county gender pyramid](graphes/Y2021-M1-W4%20rkenyacensus/gender_pyramid.jpeg "county gender pyramid")
 
 ##### Data table
 
@@ -60,30 +77,34 @@ gender %>%
                        sep = "<br/>"))))
 ```
 
+
+
 #### Crops dataset
 
 ##### PCA
 
-![individuals pca on crops data](images/graphesacp_indi.png "individuals pca plot")
+![individuals pca on crops data](graphes/Y2021-M1-W4%20rkenyacensus/graphesacp_indi.png "individuals pca plot")
 
-![variables pca on crops data](images/graphesvar.png "variables")
+![variables pca on crops data](graphes/Y2021-M1-W4%20rkenyacensus/graphesvar.png "variables")
 
 ##### KMEANS Clustering
 
-![Kmeans Silhouette](images/graphe_silhouette_km.png "Kmeans Silhouette")
+![Kmeans Silhouette](graphes/Y2021-M1-W4%20rkenyacensus/graphe_silhouette_km.png "Kmeans Silhouette")
 
-![Kmeans Clusters](images/graphe_cluster_km.png "Kmeans Clusters")
+![Kmeans Clusters](graphes/Y2021-M1-W4%20rkenyacensus/graphe_cluster_km.png "Kmeans Clusters")
 
 ##### Hclust Clustering
 
-![Hclust Silhouette](images/graphe_silhouette_cah6.png "Hclust Silhouette")
+![Hclust Silhouette](graphes/Y2021-M1-W4%20rkenyacensus/graphe_silhouette_cah6.png "Hclust Silhouette")
 
-![Hclust Clusters](images/graphe_cluster_cah6.png "Hclust Clusters")
+![Hclust Clusters](graphes/Y2021-M1-W4%20rkenyacensus/graphe_cluster_cah6.png "Hclust Clusters")
+
+![dendrogram](graphes/Y2021-M1-W4%20rkenyacensus/graphe_dendo_cah.png "dendrogram")
 
 ##### Models Comparaison (Hclust vs Kmeans)
 
-![Comparaison silhouette](images/silpatch.png "Comparaison silhouette")
+![Comparaison silhouette](graphes/Y2021-M1-W4%20rkenyacensus/silpatch.png "Comparaison silhouette")
 
-![Comparaison cluster](images/cluspatch.png "Comparaison cluster")
+![Comparaison cluster](graphes/Y2021-M1-W4%20rkenyacensus/cluspatch.png "Comparaison cluster")
 
 ### Others submissions

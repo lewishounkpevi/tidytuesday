@@ -7,3 +7,6 @@ code/old/*
 rmd/rkenyacensus/images/*
 rmd/rkenyacensus/rsconnect/*
 rmd/rkenyacensus/kenyacensus.html
+rsconnect/*
+README_files/*
+README.html
