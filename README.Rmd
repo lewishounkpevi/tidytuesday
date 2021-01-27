@@ -26,11 +26,17 @@ The data this week comes from [Break Free from Plastic](https://www.breakfreefro
 
 ### My Submission
 
+#### Starry Night
+
 ```{r plastic, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 source(here::here("code", "Y2021-M1-W5 Plastic Pollution", "plastic.R"))
 ```
 
 ![Starry Night](graphes/Y2021-M1-W5%20Plastic%20Pollution/plasticstarrynight.png "Starry Night")
+
+#### Volunteers map
+
+![volunteers map](graphes/Y2021-M1-W5%20Plastic%20Pollution/volunteers_map_patch.png "volunteers map")
 
 ### Others submissions
 
