@@ -18,6 +18,22 @@ A weekly data project aimed at the R ecosystem. As this project was borne out of
 
 [![tidytuesday](images/tt_logo.png "tidytuesday")](https://github.com/rfordatascience/tidytuesday)
 
+## Year: 2021 Month: 02 Week: 08 \| Dubois Challenge
+
+The data this week comes from [Dubois Challenge](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge) .
+
+[More information...](https://medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34)
+
+### My Submission
+
+#### Conjugal Condition
+
+```{r dubois, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+source(here::here("code", "Y2021-M2-W8_dubois_data", "duboisdata.R"))
+```
+
+![Du Bois Challenge](graphes/Y2021-M2-W8_dubois_data/conjugal_condition.jpeg "Du Bois Challenge")
+
 ## Year: 2021 Month: 01 Week: 05 \| Plastic Pollution
 
 The data this week comes from [Break Free from Plastic](https://www.breakfreefromplastic.org) courtesy of [Sarah Sauve](https://sarahasauve.wordpress.com).
