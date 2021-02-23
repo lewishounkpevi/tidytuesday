@@ -10,6 +10,8 @@ library(extrafont)
 
 tuesdata <- tidytuesdayR::tt_load(2021, week = 8)
 
+#### Conjugal Condition ####
+
 conjugal <- tuesdata$conjugal
 
 
@@ -95,6 +97,94 @@ conjugal_condition <- conjugal %>%
 #   draw_plot(p, scale = 1, width = 1)
 
 
+#### Georgia Pop #####
+
+
+georgia_pop <- tuesdata$georgia_pop
+
+comparative <- georgia_pop %>% 
+  pivot_longer(cols = -Year,
+               names_to = "color") %>%
+  ggplot() +
+  aes(y = value, x = Year) +
+    geom_line(aes(linetype = color), size = 1.5) +
+  scale_y_reverse(breaks = seq(0, 100, 5), expand = c(0, 0)) +
+  scale_x_continuous(breaks = seq(1790, 1890, 10), expand = c(0, 0)) +
+  coord_flip() +
+  add2ggplot::theme_du_bois() +
+  labs(title = "COMPARATIVE INCREASE OF WHITE AND COLORED\n POPULATION OF GEORGIA.", 
+       y = "Percents",
+       caption = "Source : Du Bois Data Challenge
+       \nTidyTuesday: Y2021-W8
+       \nby: Lewis Hounkpevi") +
+  guides(linetype = guide_legend(
+    keywidth = 5,
+    keyheight = 2,
+    default.unit = "cm",
+    label.position = "left",
+    label.theme = NULL,
+    label.hjust = 0.5,
+    label.vjust = 0.5)
+  ) +
+  theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    legend.margin = margin(10, 0, 0, 0),
+    legend.key = element_rect(fill = NA, color = NA),
+    legend.spacing.y = unit(3, 'cm'),
+    legend.background = element_blank(),
+    legend.text = element_text(size = 10,
+                               hjust = 0.5, 
+                               face = "bold",
+                               family = "mono",
+                               color = "black",
+                               margin = margin(r = 2,
+                                               l = 2,
+                                               unit = "cm")),
+    plot.background = element_rect(fill = NA, color = NA),
+    axis.ticks.x = element_line(),
+    axis.ticks.y = element_blank(),
+    axis.title.y = element_blank(),
+    axis.title.x = element_text(hjust = 0.5, 
+                                vjust = 0.5,
+                                family = "mono",
+                                color = "black",
+                                size = 15
+                                ,
+                                margin = margin(b = 0.5,
+                                                t = 2,
+                                                unit = "cm")
+                                ),
+    axis.text = element_text(family = "mono", size = 15),
+    strip.text = element_blank(),
+    panel.grid.major.x = element_line(linetype = "solid", 
+                                    colour = "orange", size = 0.5),
+    panel.grid.major.y =  element_line(linetype = "solid", 
+                                         colour = "orange", size = 1),
+    panel.border = element_rect(fill = NA,  colour = "#E7E9EA"),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(20, 0, 20, 0),
+    plot.title = element_text(size = 18, face = "bold", 
+                              colour = "black",
+                              family = "mono",
+                              vjust = 0.5,
+                              hjust = 0.5,
+                              margin = margin(b = 0.5, unit = "cm")), 
+    
+    plot.caption = element_text(size = 10, face = "plain", 
+                                family = "Century",
+                                margin = margin(t = 0.5, unit = "cm"),
+                                color = "#129188",
+                                vjust = 0.5, 
+                                hjust = 0)
+  )
+
+bg <- "https://w7.pngwing.com/pngs/982/58/png-transparent-torn-brown-paper-illustration-paper-parchment-scape-house-lukkoye-paper-sheet-miscellaneous-material-file-folders.png"
+
+comparative <- ggbackground(comparative, bg)
+
+
+
 #### Save ####
 
 ggsave( plot = conjugal_condition, 
@@ -105,3 +195,9 @@ ggsave( plot = conjugal_condition,
         bg = "white", dpi = 200)
 
 
+ggsave( plot = comparative, 
+        filename = here::here("graphes", "Y2021-M2-W8_dubois_data",
+                              "comparative.jpeg"),
+        width = 30, height = 40, units = "cm", 
+        pointsize = 5, quality = 100, 
+        bg = "white", dpi = 200)
